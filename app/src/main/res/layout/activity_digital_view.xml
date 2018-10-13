@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DigitalView">
+
+    <TextClock
+        android:id="@+id/digitalClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/digitalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="startDigital"
+        android:text="Digital" />
+
+    <Button
+        android:id="@+id/analogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/digitalButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="startAnalog"
+        android:text="Analog" />
+
+    <Button
+        android:id="@+id/redoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/analogButton"
+        android:layout_alignParentEnd="true"
+        android:text="redo" />
+
+    <Button
+        android:id="@+id/undoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/analogButton"
+        android:layout_toStartOf="@+id/redoButton"
+        android:text="Undo" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Time: " />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="75dp"
+        android:text="Date: " />
+
+    <EditText
+        android:id="@+id/hourEditText"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/timeTextView"
+        android:ems="10"
+        android:hint="Hour"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeTextView"
+        android:layout_toEndOf="@+id/hourEditText"
+        android:text=":" />
+
+    <EditText
+        android:id="@+id/minuteEditText"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView6"
+        android:ems="10"
+        android:hint="Minutes"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeTextView"
+        android:layout_toEndOf="@+id/minuteEditText"
+        android:text=":" />
+
+    <EditText
+        android:id="@+id/secondEditText"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="137dp"
+        android:ems="10"
+        android:hint="Seconds"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/monthEditText"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="59dp"
+        android:layout_toEndOf="@+id/timeTextView"
+        android:ems="10"
+        android:hint="Month"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/dayEditText"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/monthEditText"
+        android:layout_toEndOf="@+id/monthEditText"
+        android:ems="10"
+        android:hint="Day"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/yearEditText"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/monthEditText"
+        android:layout_toEndOf="@+id/dayEditText"
+        android:ems="10"
+        android:hint="Year"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/timeSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-137dp"
+        android:layout_toEndOf="@+id/secondEditText"
+        android:onClick="submitTime"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/dateSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/monthEditText"
+        android:layout_marginStart="-137dp"
+        android:layout_toEndOf="@+id/secondEditText"
+        android:onClick="submitDate"
+        android:text="submit" />
+
+
+</RelativeLayout>

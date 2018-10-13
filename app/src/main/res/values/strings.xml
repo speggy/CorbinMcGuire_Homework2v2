@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CorbinMcGuire_Homework2</string>
+    <string name="title_activity_analog_view">AnalogView</string>
+    <string name="title_activity_digital_view">DigitalView</string>
+</resources>
