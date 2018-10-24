@@ -1,3 +1,5 @@
+Link to previous repo: https://github.com/speggy/CorbinMcGuire_Homework2.git
+
 # CorbinMcGuire_Homework2 Clock Application
 This application is the second homework assignment for CEG 4110. The purpose of this project is to practice various 
 software design patterns. 
